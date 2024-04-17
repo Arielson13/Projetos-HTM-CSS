@@ -15,39 +15,36 @@ textarea{
 }
 
 body {
-     background-color: #f7f7f7;
+     background-color: #E5E5E5;
+     height: 100vh;
 }
 
 header{
-     background-color: #fff;
-     height: 6em;
+     background-color: #e5e5e5cb;
+     height: 6rem;
+     position: fixed;
+     width: 100%;
+     z-index: 100000;
 }
 
 header #navbar{
      display: flex;
      justify-content: space-between;
      align-items: center;
+     height: 100%;
 
      padding: 0 2rem;
      max-width: 1200px;
      margin: 0 auto;
-     height: 6em;
 }
 
 header #navbar .hamburger-menu{
      display: none;
 }
 
-header #navbar .nav-brand{
-     text-decoration: none;
-     font-size: 1.5rem;
-     font-weight: 700;
-     color: #333;
-}
-
 header #navbar .nav-brand img{
-     height: 10em;
-     width: 10em;
+     height: 100%;
+     width: 15rem;
 }
 
 header #navbar .nav-list{
@@ -66,7 +63,7 @@ header #navbar .nav-list .nav-item a{
 }
 
 header #navbar .nav-list .nav-item a:hover{
-     color: #214664;
+     color: #2d628d;
      transition: color 0.3s;
 }
 
@@ -79,6 +76,26 @@ header .menu-mobile{
 }
 
 @media(max-width: 740px){
+     header{
+          height: 6rem;
+          width: 100%;
+          background-color: #fff;
+          position: initial;
+     }
+
+     header #navbar{
+          height: 100%;
+          justify-content: space-between;
+          padding: 0 2rem;
+          width: 100%;
+          max-width: none;
+     }
+
+     header #navbar .nav-brand img{
+          width: 15rem;
+          height: 100%;
+     }
+
      header #navbar .nav-list{
           display: none;
           position: absolute;
@@ -88,12 +105,12 @@ header .menu-mobile{
           background-color: #fff;
           z-index: 1000;
           text-align: center;
-          height: calc(100vh - 6rem);
+          height: calc(100rem - 6rem);
           overflow: hidden;  
      }
 
      header #navbar .nav-list .nav-item{
-          padding: 30px;
+          padding: 40px;
      }
 
      header #navbar .nav-list .nav-item a{
@@ -111,20 +128,22 @@ header .menu-mobile{
      header #navbar .hamburger-menu{
           display: block;
      }
+
+     header #navbar .hamburger-menu i{
+          font-size: 30pt;
+     }
 }
 
-/* SECTION BANNER */
-main{
-     margin-top: 6rem;
-}
-
+/*! SECTION BANNER !*/
 main #banner{
      display: flex;
-     justify-content: space-between;    
+     justify-content: space-between;   
+     align-items: center; 
 
      max-width: 1200px;
      padding: 0 2rem;
      margin: 0 auto;
+     height: 100vh;
 }
 
 main #banner .banner-content .banner-content-title{
@@ -157,7 +176,8 @@ main #banner .banner-content .banner-content-redes-sociais ul li{
 }
 
 main #banner .banner-content .banner-content-redes-sociais ul li a i{
-     color: #214664;     
+     color: #214664;
+     font-size: 50pt;     
 }
 
 main #banner .banner-content .banner-content-redes-sociais ul li a .gradiente-insta:hover{
@@ -195,66 +215,133 @@ main #banner .banner-content .banner-content-btn{
      cursor: pointer;
 }
 
-main #banner .banner-image{
+main #banner .banner-content .banner-content-btn a{
+     text-decoration: none;
+     color: #fff;
+}
+
+main #banner .banner-container-notebook{
+     width: 420px;
+     height: 420px;
+     background-color: #214664;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      border-radius: 50%;
-     width: 100%;
-     max-width: 350px;
+}
+
+main #banner .banner-container-notebook .image-float{
+     margin-right: -355px;
+}
+
+main #banner .banner-container-notebook .banner-image{
+     width: 440px;
+     height: 240px;
+     animation: float 3s infinite backwards;
+}
+
+@keyframes float {
+     0% {
+          transform: translateY(2rem);
+        }
+        50% {
+          transform: translateY(-2rem);
+        }
+        100% {
+          transform: translateY(2rem);
+        }
 }
 
 @media(max-width: 920px){
      main #banner{
           flex-direction: column-reverse;
           align-items: center;
-          gap: 2rem;
-          margin-top: 8em;
+          justify-content: center;
+          height: 50rem;
+          margin: 2rem 0;
      }
 
      main #banner .banner-content{
           text-align: center;
+          margin: 3rem 0;
+     }
+
+     main #banner .banner-container-notebook{
+          width: 15rem;
+          height: 15rem;
+          border-radius: 50%;
+          margin: 1rem 0;
+     }
+
+     main #banner .banner-container-notebook .image-float{
+          margin-right: -150px;
+     }
+
+     main #banner .banner-container-notebook .banner-image{
+          width: 70%;
+          height: 60%;
      }
 
      main #banner .banner-content .banner-content-redes-sociais ul{
           justify-content: center;
      }
+
+     main #banner .banner-content .banner-content-btn{
+          font-size: 35px;
+          margin-top: 2rem;
+     }
 }
 
-/* SECTION ABOUT */
+/*! SECTION ABOUT !*/
 main #about{
-     max-width: 1200px;     
-     padding: 0 2rem;
-     margin: 5em auto;
+     /* margin-top: 5rem;      */
+     width: 100%;
+     background-color: #F1F1F1;
+     height: 50rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 main #about .about-container{
-     width: 100%;
+     max-width: 1200px;     
+     padding: 0 2rem;
+     margin: 2em auto;
      display: flex;
      justify-content: space-between;
+     align-items: center;
      gap: 20px;
-}
-
-main #about h1{
-     text-align: center;
-     padding-bottom: 1em;
-     font-size: 25pt;
-     font-weight: 700;
-     text-transform: uppercase;
 }
 
 main #about .my-person{
      width: 35%;
-     height: 30em;
-     border: 5px  5px  5px solid #edf7fa;
-     border-style: outset;
-     border-radius: 5px;
+     height: 25rem;
+     border: none;
 }
 
 main #about .my-person img{
-     height: 100%;
-     width: 100%;
+     max-height: 100%;
+     max-width: 100%;
+     border-radius: 50%;     
+     max-width: 350px;
 }
 
 main #about .about-me{
-     width: 60%;
+     width: 60%;  
+     display: flex;
+     flex-direction: column; 
+     align-items: flex-start;  
+}
+
+main #about .about-me h1{
+     font-size: 25pt;
+     font-weight: 700;
+     text-transform: uppercase;
+     padding-bottom: 20px;
+}
+
+main #about .about-me h1 strong {
+     color: #214664;
 }
 
 main #about .about-me p{
@@ -278,36 +365,65 @@ main #about .about-me .about-me-btn{
      margin-top: 2em;
 }
 
+main #about .about-me .about-me-btn a{
+     text-decoration: none;
+     color: #fff;
+}
+
 @media(max-width: 920px){
+
+     main #about{
+          height: 90rem;
+     }
+
+     main #about h1{
+          font-size: 30pt;
+     }
+
      main #about .about-container{
           flex-direction: column;
           align-items: center;
+          text-align: center;
      }
 
      main #about .my-person{
-          width: 90%;
+          width: 100%;
           height: 23em;
      }
 
      main #about .about-me{
           width: 100%;
           text-align: center;
+          align-items: center;
+     }
+
+     main #about .about-me p{
+          font-size: 18pt;
+     }
+
+     main #about .about-me .about-me-btn{
+          font-size: 25pt;
      }
 }
 
-/* SECTION SKILLS */
-section#skills{
-     margin: 70px 0;
+/*! SECTION SKILLS !*/
+section#skills{     
+     max-width: 1200px;
+     margin: 5rem auto;
+
+     height: 15rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 #skills .skills-content{
-     padding: 0 2rem;
-     max-width: 1200px;
-     margin: 0 auto;
+     width: 100%;
+     height: 100%;
 }
 
 #skills .skills-content .skills-content-header{
-     padding: 2rem 0;
+     padding-bottom: 3rem;
 }
 
 #skills .skills-content .skills-content-header .section-title{
@@ -317,82 +433,167 @@ section#skills{
      text-transform: uppercase;
 }
 
+#skills .skills-content .skills-content-header .section-title strong{
+     color: #214664;
+}
+
 #skills .skills-content .skills-list{
      width: 100%;
      display: flex;
-     flex-wrap: wrap;
-     gap: 20px;
+     flex-wrap: nowrap;
      justify-content: space-between;
      align-items: center;
 }
 
 #skills .skills-content .skills-list li{
      list-style: none;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+#skills .skills-content .skills-list li:hover{
+     transition: 0.3s;
+     transform: scale(1.1);
+}
+
+#skills .skills-content .skills-list li strong{
+     color: #0D1D27;
 }
 
 #skills .skills-content .skills-list li a i{
-     font-size: 5rem;
+     font-size: 7rem;
      color: #214664;
-}
-
-#skills .skills-content .skills-list li a svg path{
-     fill: #214664; 
-}
-
-#skills .skills-content .skills-list li a svg path:hover{
-     fill: black;
-     transition: 0.3s;
-     
 }
 
 #skills .skills-content .skills-list li a .html:hover{
      color: #F16A30;
      transition: 0.3s;
-     font-size: 6rem;
+     transform: scale(1.2);
 }
 
 #skills .skills-content .skills-list li a .css:hover{
-     color: #2D53E5;
+     color: #087ECE;
      transition: 0.3s;
-     font-size: 6rem;
+     transform: scale(1.2);
+}
+
+#skills .skills-content .skills-list li a .Tcss:hover{
+     color: black;
+     transition: 0.3s;
+     transform: scale(1.2);
 }
 
 #skills .skills-content .skills-list li a .boots:hover{
      color: #814ECC;
      transition: 0.3s;
-     font-size: 6rem;
+     transform: scale(1.2);
 }
 
-#skills .skills-content .skills-list li a .sasss:hover{
-     color: #CF6C9C;
+#skills .skills-content .skills-list li a .node:hover{
+     color: #58A149;
      transition: 0.3s;
-     font-size: 6rem;
+     transform: scale(1.2);
 }
 
 #skills .skills-content .skills-list li a .JS:hover{
      color: #F7E025;
      transition: 0.3s;
-     font-size: 6rem;
-}
-
-#skills .skills-content .skills-list li a .ts{
-     font-size: 4.7rem;
+     transform: scale(1.2);
 }
 
 #skills .skills-content .skills-list li a .ts:hover{
      color: #087ECE;
      transition: 0.3s;
-     font-size: 5.5rem;
+     transform: scale(1.2);
 }
 
 #skills .skills-content .skills-list li a .rct:hover{
      color: #50D6FF;
      transition: 0.3s;
-     font-size: 6rem;
+     transform: scale(1.2);
 }
 
 @media(max-width: 740px){
-     #skills .skills-content .skills-list{
+     #skills .skills-content{
+          height: 100rem;
+          display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          padding: 30px;
+
+          margin-top: 20rem;
+     }
+
+     #skills .skills-content .skills-content-header .section-title{
+          font-size: 30pt;
+     }
+
+     #skills .skills-content .skills-list{
+          flex-wrap: wrap;
+     }
+
+     #skills .skills-content .skills-list li a i{
+          font-size: 7rem;
+          color: #214664;
+     }
+
+     #skills .skills-content .skills-list li strong p{
+          font-size: 18pt;
+          display: none;
+     }
+}
+
+/*! FOOTER RODAPE !*/
+footer{
+     background-color: #E5E5E5;
+     height: 15rem;
+}
+
+footer #rodape{
+     padding: 0 2em;
+     max-width: 1200px;
+     margin: 0 auto;
+     height: 100%;
+
+     display: flex;
+     justify-content: center;
+     flex-direction: column-reverse;
+     align-items: center;
+     gap: 20px;
+}
+
+footer #rodape .rodape-copy{
+     padding-bottom: 20px;
+}
+
+footer #rodape .rodape-redes-sociais ul{
+     display: flex;
+     gap: 10px;
+}
+
+footer #rodape .rodape-redes-sociais ul li{
+     list-style: none;
+}
+
+footer #rodape .rodape-redes-sociais ul li a i{
+     color: #214664;
+}
+
+@media(max-width: 740px){
+     footer{
+          height: 20rem;
+     }
+
+     footer #rodape{
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+     }
+
+     footer #rodape .rodape-copy{
+          text-align: center;
      }
 }

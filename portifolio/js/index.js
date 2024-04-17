@@ -18,3 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Função para criar e baixar o PDF
+function baixarPDF() {
+    // URL do PDF que você quer baixar
+    var urlPDF = "/assets/pdf/Arielson Sousa Duarte.pdf";
+    
+    // Altera o href do link para o URL do PDF
+    document.getElementById('downloadLink').href = urlPDF;
+}
+
+// Chama a função ao carregar a página
+window.onload = baixarPDF;

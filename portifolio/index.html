@@ -18,8 +18,8 @@
      <!-- CDN Fonte Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-     <!-- CDN DevIcon -->
-     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+     <!-- CDN BoxIcons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
           
 </head>
 <body>
@@ -40,7 +40,7 @@
                          <a href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                         <a href="#posts">Projetos</a>
+                         <a href="#projects">Projetos</a>
                     </li>
                </ul>              
                
@@ -81,19 +81,26 @@
                               </li>
                          </ul>
                     </div>
-                    <button class="banner-content-btn">Veja meu CV</button>
+                    <button class="banner-content-btn">
+                         <a href="#" id="downloadLink" download="documento.pdf">
+                              Veja meu CV
+                         </a>
+                    </button>
                </div>
 
-               <img src="https://avatars.githubusercontent.com/u/52675088?v=4" alt="Arielson Duarte" title="Foto de Arielson Sousa Duarte" class="banner-image">
+               <div class="banner-container-notebook">
+                    <img src="assets/vidro.png" class="banner-image image-float">
+                    <img src="assets/notebook-2-white.png" class="banner-image">
+               </div>
           </section>
 
-          <section id="about">
-               <h1>Sobre mim</h1>
+          <section id="about">               
                <div class="about-container">
                     <div class="my-person">
-                         <img src="assets/my-person.png" alt="Foto de Arielson Sousa Duarte" title="Foto de Arielson Sousa Duarte">
+                         <img src="https://avatars.githubusercontent.com/u/52675088?v=4" alt="Foto de Arielson Sousa Duarte" title="Foto de Arielson Sousa Duarte">
                     </div>
                     <div class="about-me">
+                         <h1>Sobre <strong>mim</strong></h1>
                          <p>
                               <strong>Olá! Me chamo Arielson e sou um desenvolvedor frontend em formação!</strong> Gosto MUITO da área de tecnologia, e tenho certeza que posso contribuir em qualquer time com as minhas habilidades.
 
@@ -101,7 +108,11 @@
                               <br><br>
                               Ah, gosto de jogos, filmes, séries, animes e outras nerdices. 💜
                          </p>
-                         <button class="about-me-btn">Veja meu CV</button>
+                         <button class="about-me-btn">
+                              <a href="#" id="downloadLink" download="documento.pdf">
+                                   Veja meu CV
+                              </a>
+                         </button>
                     </div>
                </div>
           </section>
@@ -109,109 +120,183 @@
           <section id="skills">
                <div class="skills-content">
                     <div class="skills-content-header">
-                         <h2 class="section-title">SoftSkills</h2>
+                         <h2 class="section-title">Soft<strong>Skills</strong></h2>
                     </div>     
                     
                     <ul class="skills-list">
                          <li>
-                              <a href="#" title="HTML5">                                   
-                                   <i class="fa-brands fa-html5 html"></i>                   
+                              <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" title="HTML5">                                   
+                                   <i class='bx bxl-html5 html'></i>
                               </a>
+                              <strong><p>Html5</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="CSS3">                                  
-                                   <i class="fa-brands fa-css3 css"></i>                
+                              <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" title="CSS3">                                  
+                                   <i class='bx bxl-css3 css'></i>
                               </a>
+                              <strong><p>CSS3</p></strong>                
                          </li>
                          <li>
-                              <a href="#" title="Tailwindcss" class="Tcss"> 
-                                   <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="6rem" height="6rem" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z"/>
-                                      </svg>
-                                                                            
-                               </a>
+                              <a href="https://tailwindcss.com/" target="_blank" title="Tailwindcss">
+                                   <i class='bx bxl-tailwind-css Tcss'></i>
+                              </a>
+                              <strong><p>Tailwind</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="Bootstrap">
-                                   <i class="fa-brands fa-bootstrap boots"></i>     
+                              <a href="https://getbootstrap.com/" target="_blank" title="Bootstrap">
+                                   <i class='bx bxl-bootstrap boots'></i>    
                               </a>
+                              <strong><p>Bootstrap</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="SASS">
-                                   <i class="fa-brands fa-sass sasss"></i>         
+                              <a href="https://sass-lang.com/" target="_blank" title="SASS">
+                                   <i class='bx bxl-nodejs node'></i>
                               </a>
+                              <strong><p>NodeJS</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="Javascript">   
-                                   <i class="fa-brands fa-js JS"></i>                
+                              <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" title="Javascript">   
+                                   <i class='bx bxl-javascript JS'></i>
                               </a>
+                              <strong><p>Javascript</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="Typescript">                                
-                                   <i class="devicon-typescript-plain ts"></i>                   
+                              <a href="https://www.typescriptlang.org/" target="_blank" title="Typescript">                                
+                                   <i class='bx bxl-typescript ts'></i>
                               </a>
+                              <strong><p>Typescript</p></strong>
                          </li>
                          <li>
-                              <a href="#" title="React">
-                                   <i class="fa-brands fa-react rct"></i>                 
+                              <a href="https://react.dev/" target="_blank" title="React">
+                                   <i class='bx bxl-react rct'></i>                 
                               </a>
+                              <strong><p>React</p></strong>
                          </li>
                     </ul>                    
                </div>
           </section>
 
           <section id="projects">
-               <h1>Projetos</h1>
-               <div class="wrapment">               
-                    <div class="container">
-                        <input type="radio" name="slide" id="c1" checked>
-                        <label for="c1" class="card">
-                            <div class="row">
-                                <a href="https://github.com/Arielson13/CRUD-JAVASCRIPT/tree/main/SG-Funcionarios" target="_blank" class="icon">Ver</a>
-                                <div class="description">
-                                    <h4 style="color: black;">CRUD - JS. Controle de Funcionários</h4>
-                                    <p style="color: black;">Tecnologias: HTML, CSS e JS.</p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide" id="c2" >
-                        <label for="c2" class="card">
-                            <div class="row">
-                                <a href="https://github.com/Arielson13/Projetos-HTM-CSS/tree/main/TheBoys" target="_blank" class="icon">Ver</a>
-                                <div class="description">
-                                    <h4 style="color: white;">The Boys</h4>
-                                    <p style="color: white;">Landing Page do The Boys: HTML e CSS apenas.</p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide" id="c3" >
-                        <label for="c3" class="card">
-                            <div class="row">
-                                <a href="https://github.com/Arielson13/CRUD-JAVASCRIPT/tree/main/CRUD-Bootstrap-LocaleStorage" target="_blank" class="icon">Ver</a>
-                                <div class="description">
-                                    <h4>Controle de Usuários</h4>
-                                    <p>Tecnologias: HTML, CSS, Bootstrap e Javascript.</p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide" id="c4" >
-                        <label for="c4" class="card">
-                            <div class="row">
-                                <div class="icon">4</div>
-                                <div class="description">
-                                    <h4>New technologies</h4>
-                                    <p>Space engineering becomes
-                                     more and more advanced</p>
-                                </div>
-                            </div>
-                        </label>
+               <div class="projects-container">
+                    <h1>Meus <strong>Projetos</strong></h1>
+                    <!-- * Primeira Linha de projetos * -->
+                    <div class="wrapper">
+                         <div class="card">
+                              <img src="assets/LocaleStorage.PNG" alt="">
+                              <div class="info">
+                                   <h2>Cadastro de Usuários</h2>
+                                   <p>
+                                        CRUD em JS. Sistema de Gestão <br>
+                                        <strong>Tecnologias:</strong> HTML, CSS, Bootstrap e Javascript.
+                                   </p>
+                                   <a href="https://github.com/Arielson13/CRUD-JAVASCRIPT/tree/main/CRUD-Bootstrap-LocaleStorage" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="card">
+                              <img src="assets/LandingPageTheBoys.PNG" alt="">
+                              <div class="info">
+                                   <h2>Landing Page</h2>
+                                   <p>
+                                        The Boys <br>
+                                        <strong>Tecnologias:</strong> HTML e CSS apenas!
+                                   </p>
+                                   <a href="https://github.com/Arielson13/Projetos-HTM-CSS/tree/main/TheBoys" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="card">
+                              <img src="assets/SG-Funcionarios.PNG" alt="">
+                              <div class="info">
+                                   <h2>Controle de Funcionários</h2>
+                                   <p>
+                                        CRUD em JS. Sistema de Gestão <br>
+                                        <strong>Tecnologias:</strong> HTML, CSS e Javascript.
+                                   </p>
+                                   <a href="https://github.com/Arielson13/CRUD-JAVASCRIPT/tree/main/SG-Funcionarios" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
+                    </div>
+                    <br>
+                    <!-- * Segunda Linha de projetos * -->
+                    <div class="wrapper">
+                         <div class="card">
+                              <img src="assets/Mario.png" alt="">
+                              <div class="info">
+                                   <h2>Landing Page Super Mario</h2>
+                                   <p>
+                                        <strong>Tecnologias:</strong> HTML e CSS apenas!
+                                   </p>
+                                   <a href="https://github.com/Arielson13/Projetos-HTM-CSS/tree/main/html-css-mario" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="card">
+                              <img src="assets/todo.PNG" alt="">
+                              <div class="info">
+                                   <h2>Lista de Tarefas</h2>
+                                   <p>
+                                        To-do List <br>
+                                        <strong>Tecnologias:</strong> HTML, CSS, Javascript e BoxIcons (Biblioteca de icones).
+                                   </p>
+                                   <a href="https://github.com/Arielson13/CRUD-JAVASCRIPT/tree/main/To-do-List" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="card">
+                              <img src="assets/card3D.PNG" alt="">
+                              <div class="info">
+                                   <h2>Cards com efeito 3D</h2>
+                                   <p>
+                                        <strong>Tecnologias:</strong> HTML e CSS apenas! <br>
+                                        Ao passar o mouse em cima de uma das imagens irá aparecer um efeito 3D legal.
+                                   </p>
+                                   <a href="https://github.com/Arielson13/Projetos-HTM-CSS/tree/main/Card-3D-HTML-CSS" target="_blank" class="btn">
+                                        Ver repositório
+                                   </a>
+                              </div>
+                         </div>
                     </div>
                </div>
           </section>
      </main>
 
      <footer>
-
+          <div id="rodape">
+               <div class="rodape-copy">
+                    <p>Copyright ©2024, Todos os direitos reservados.</p>
+               </div>               
+               <div class="rodape-redes-sociais">                    
+                    <ul>
+                         <li>
+                              <a href="https://www.instagram.com/arielson_duarte0/" target="_blank">
+                                   <i class="fa-brands fa-square-instagram fa-3x gradiente-insta"></i>
+                              </a>
+                         </li>
+                         <li>
+                              <a href="https://www.linkedin.com/in/arielson-sousa-duarte-4a3a28197/" target="_blank">
+                                   <i class="fa-brands fa-linkedin fa-3x gradiente-linkedin"></i>
+                              </a>
+                         </li>
+                         <li>
+                              <a href="https://wa.me/5599991701422" target="_blank">
+                                   <i class="fa-brands fa-square-whatsapp fa-3x gradiente-whats"></i>
+                              </a>
+                         </li>
+                         <li>
+                              <a href="https://github.com/Arielson13" target="_blank">
+                                   <i class="fa-brands fa-square-github fa-3x gradiente-git"></i>
+                              </a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
      </footer>
      <script src="js/index.js"></script>
 </body>

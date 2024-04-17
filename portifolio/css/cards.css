@@ -1,108 +1,132 @@
+#projects{
+    margin-bottom: 3rem;
+    background-color: #F1F1F1;
+
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #projects h1{
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 3rem;
     font-weight: 700;
     font-size: 25pt;
     text-transform: uppercase;
 }
 
-.wrapment {
-     width: 100%;
-     height: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+#projects h1 strong{
+    color: #214664;
+}
 
-     max-width: 1200px;
-     padding: 0 2rem;
-     margin: 0 auto;
- }
- 
- .container {
-     height: 400px;
-     width: 100%;
-     display: flex;
-     flex-wrap: nowrap;
-     justify-content: start;
- }
- 
- .card {
-     width: 90px;
-     border-radius: .85rem;
-     background-size: cover;
-     cursor: pointer;
-     overflow: hidden;
-     border-radius: 3rem;
-     margin: 0 10px;
-     display: flex;
-     align-items: flex-end;
-     transition: .6s cubic-bezier(.28,-0.03,0,.99);
-     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
- }
- 
- .card > .row {
-     color: white;
-     display: flex;
-     flex-wrap: nowrap;
- }
- 
- .card > .row > .icon {
-     background: #223;
-     color: white;
-     border-radius: 50%;
-     width: 50px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin: 15px;
- }
- 
- .card > .row > .description {
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     overflow: hidden;
-     height: 80px;
-     width: 520px;
-     opacity: 0;
-     transform: translateY(30px);
-     transition-delay: .3s;
-     transition: all .3s ease;
- }
- 
- .description p {
-     padding-top: 5px;
- }
- 
- .description h4 {
-     text-transform: uppercase;
- }
- 
- input {
-     display: none;
- }
- 
- input:checked + label {
-     width: 80%;
- }
- 
- input:checked + label .description {
-     opacity: 1 !important;
-     transform: translateY(0) !important;
- }
- 
- .card[for="c1"] {
-     background-image: url('/assets/SG-Funcionarios.PNG');
-     padding: 10px;
- }
- .card[for="c2"] {
-     background-image: url('/assets/LandingPageTheBoys.PNG');
-     padding: 10px;
- }
- .card[for="c3"] {
-     background-image: url('/assets/LocaleStorage.PNG');
-     padding: 10px;
- }
- .card[for="c4"] {
-     background-image: url('./img4.jpeg');
- }
+ .wrapper {
+	display: flex;
+	justify-content: space-between;
+    gap: 10px;
+	
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+.card {
+	width: 400px;
+	height: 360px;
+	background: #fff;
+	display: flex;
+	align-items: flex-end;
+	padding: 2rem 1rem;
+	position: relative;
+	transition: 0.5s all ease-in-out;
+    border-radius: 20px;
+}
+.card:hover {
+	transform: translateY(-10px);
+}
+.card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+	z-index: 2;
+	opacity: 0;
+	transition: 0.5s all;
+    border-radius: 20px;
+}
+.card:hover::before {
+	opacity: 1;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+    border-radius: 20px;
+}
+.card .info {
+	position: relative;
+	color: #fff;
+	z-index: 3;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+.card:hover .info {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.card .info h1 {
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+.card .info p {
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.card .info .btn {
+	background: #fff;
+	padding: 0.5rem 1rem;
+	color: #000;
+	font-size: 12px;
+	cursor: pointer;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: .4s ease-in-out;
+}
+.card .info .btn:hover {
+	background: #214664;
+	color: #fff;
+	box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 740px){
+	#projects{
+		height: 160rem;
+		margin-top: 25rem;
+		margin-bottom: 0;
+	}
+
+    #projects h1{
+        font-size: 30pt;
+    }
+
+    .wrapper{
+         flex-direction: column;
+         width: 100%;
+         gap: 2rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
