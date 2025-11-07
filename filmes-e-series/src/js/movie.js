@@ -30,6 +30,11 @@ function renderMovieDetails(movie) {
         <p><strong>Data de Lançamento:</strong> ${movie.release_date}</p>
       </div>
     </div>
+    <div class="player-container">
+      <button class="play-button" id="playTrailer" aria-label="Assistir trailer">
+        <i class="fa-solid fa-play"></i>Play
+      </button>
+    </div>
   `;
 }
 
